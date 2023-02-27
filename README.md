@@ -35,13 +35,13 @@ ip route list | grep default | cut -d' ' -f 3
 For MikroTik 6.48.6
 
 ```bash
-  cd my-project
+  bash -c "$(curl -L https://raw.githubusercontent.com/azadrahorg/Install-MikroTik-CHR-on-VPS/main/mik-6486.sh)"
 ```
 
 For MikroTik 7.8
 
 ```bash
-  cd my-project
+  bash -c "$(curl -L https://raw.githubusercontent.com/azadrahorg/Install-MikroTik-CHR-on-VPS/main/mik78.sh)"
 ```
 
 After install be sure to turn off the server and turn on again
