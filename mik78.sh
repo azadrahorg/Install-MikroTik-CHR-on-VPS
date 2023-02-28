@@ -1,4 +1,12 @@
-#!/bin/bash
+#!/bin/bash -e
+
+echo
+echo "=== azadrah.org ==="
+echo "=== https://github.com/azadrahorg ==="
+echo "=== MikroTik 7 Installer ==="
+echo
+sleep 3
+
 wget https://download.mikrotik.com/routeros/7.8/chr-7.8.img.zip -O chr.img.zip  && \
 gunzip -c chr.img.zip > chr.img  && \
 STORAGE=`lsblk | grep disk | cut -d ' ' -f 1 | head -n 1` && \

@@ -1,4 +1,12 @@
-#!/bin/bash
+#!/bin/bash -e
+
+echo
+echo "=== azadrah.org ==="
+echo "=== https://github.com/azadrahorg ==="
+echo "=== MikroTik 6 Installer ==="
+echo
+sleep 3
+
 wget https://download.mikrotik.com/routeros/6.48.6/chr-6.48.6.img.zip -O chr.img.zip  && \
 gunzip -c chr.img.zip > chr.img  && \
 mount -o loop,offset=512 chr.img /mnt && \
