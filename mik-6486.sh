@@ -11,9 +11,13 @@ wget https://download.mikrotik.com/routeros/6.48.6/chr-6.48.6.img.zip -O chr.img
 gunzip -c chr.img.zip > chr.img  && \
 mount -o loop,offset=512 chr.img /mnt && \
 STORAGE=`lsblk | grep disk | cut -d ' ' -f 1 | head -n 1` && \
+echo STORAGE is $STORAGE && \
 ETH=`ip route show default | sed -n 's/.* dev \([^\ ]*\) .*/\1/p'` && \
+echo ETH is $ETH && \
 ADDRESS=`ip addr show $ETH | grep global | cut -d' ' -f 6 | head -n 1` && \
+echo ADDRESS is $ADDRESS && \
 GATEWAY=`ip route list | grep default | cut -d' ' -f 3` && \
+echo GATEWAY is $GATEWAY && \
 echo "/ip address add address=$ADDRESS interface=[/interface ethernet find where name=ether1]
 /ip route add gateway=$GATEWAY
 /ip service disable telnet
