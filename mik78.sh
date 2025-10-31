@@ -6,7 +6,7 @@ echo "=== https://github.com/azadrahorg ==="
 echo "=== MikroTik 7 Installer ==="
 echo
 sleep 3
-wget https://download.mikrotik.com/routeros/7.11.2/chr-7.11.2.img.zip -O chr.img.zip  && \
+wget https://download.mikrotik.com/routeros/7.20.2/chr-7.20.2.img.zip -O chr.img.zip  && \
 gunzip -c chr.img.zip > chr.img  && \
 STORAGE=`lsblk | grep disk | cut -d ' ' -f 1 | head -n 1` && \
 echo STORAGE is $STORAGE && \
